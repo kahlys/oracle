@@ -1,0 +1,40 @@
+run:
+  deadline: 5m
+
+linters:
+  disable-all: true
+  enable:
+    - bodyclose
+    - dogsled
+    - gci
+    - goconst
+    - gocritic
+    - goimports
+    - goprintffuncname
+    - gosimple
+    - govet
+    - ineffassign
+    - misspell
+    - nakedret
+    - revive
+    - staticcheck
+    - stylecheck
+    - typecheck
+    - unconvert
+    - unparam
+    - unused
+    - whitespace
+
+output:
+  sort-results: true
+
+linters-settings:
+  gci:
+    sections:
+      - standard
+      - default
+      - prefix(github/kahlys/oracle)
+  goimports:
+    local-prefixes: github/kahlys/oracle
+  goconst:
+    min-occurrences: 5
